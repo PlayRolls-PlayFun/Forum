@@ -106,7 +106,7 @@ body {
 
 @media (max-width: 480px) {
   .image-container img {
-      width: 90%;
+      width: 100%;
   }
 
   #text1, #text2 {
