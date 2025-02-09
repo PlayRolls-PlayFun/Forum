@@ -1,0 +1,126 @@
+body {
+  background-color: rgb(20, 20, 20);
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", serif;
+  color: white;
+}
+
+.image-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Базовый размер изображения для ПК */
+.image-container img {
+  width: 250px; /* Размер по умолчанию для ПК */
+  height: auto; /* Сохраняем пропорции */
+  margin-left:50px ;
+}
+
+#text1, #text2 {
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 10px 0;
+}
+
+#text1:hover {
+  color: rgb(0, 110, 255);
+  transition: color 0.6s;
+}
+
+#text2:hover {
+  color: red;
+  transition: color 0.6s;
+}
+
+#text2::after {
+  content: "";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#text2:hover::after {
+  content: "?";
+  opacity: 1;
+}
+
+#alltext, #alltext2 {
+  font-family: "Russo One", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 20px;
+}
+
+
+/* Стили для контейнера */
+.content-container {
+  display: flex;
+  flex-wrap: wrap; /* Разрешаем перенос блоков на новую строку */
+  gap: 20px; /* Расстояние между блоками */
+  margin: 20px;
+}
+
+/* Стили для каждого блока .content */
+.content {
+  flex: 1 1 calc(33.333% - 20px); /* 3 столбца на ПК */
+  box-sizing: border-box; /* Учитываем padding и border в ширине */
+}
+
+/* Фиксированная ширина для текста */
+#alltext2 {
+  width: 480px; /* Фиксированная ширина */
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Russo One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+  .content {
+      flex: 1 1 100%; /* На мобильных устройствах блоки в столбик */
+  }
+
+  #alltext2 {
+      width: 100%; /* Ширина текста на всю доступную ширину */
+  }
+}
+
+  #text1, #text2 {
+      font-size: 24px;
+  }
+
+  #alltext, #alltext2 {
+      margin: 10px;
+  }
+
+  #alltext2 {
+      font-size: 14px;
+  }
+
+
+@media (max-width: 480px) {
+  .image-container img {
+      width: 10%;
+  }
+
+  #text1, #text2 {
+      font-size: 20px;
+  }
+
+  #alltext, #alltext2 {
+      margin: 5px;
+  }
+
+  #alltext2 {
+      font-size: 12px;
+  }
+}
+#alltext2 {
+  width: 480px;
+}
