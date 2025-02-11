@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lilita+One&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Russo+One&display=swap" rel="stylesheet">
+    <title>PlayFun Paynaments</title>
+    <link rel="stylesheet" href="./css/styleForym.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css" />
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <div class="image-container">
+        <img src="./img/playFunicon (3).png" alt="icon" class="logo">
+        <h1 id="text1">Paynaments</h1>
+    </div>
+
+    <form id="payment-form">
+        <div class="form-group">
+            <label for="amount">Сумма пополнения (в долларах):</label>
+            <input type="number" id="amount" name="amount" required>
+        </div>
+        <div class="form-group">
+            <label for="fullname">Имя и фамилия (на латинице):</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+        <button type="submit">Подтвердить</button>
+    </form>
+
+    <script>
+        const stripe = Stripe('pk_test_51N...'); // Замените на ваш Publishable Key
+
+        const form = document.getElementById('payment-form');
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const amount = document.getElementById('amount').value;
+            const fullname = document.getElementById('fullname').value;
+
+            // Создаем сессию Checkout
+            const response = await fetch('https://your-server.com/create-checkout-session', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    amount: amount * 100, // Сумма в центах
+                    currency: 'usd',
+                    fullname: fullname,
+                }),
+            });
+
+            const session = await response.json();
+
+            // Перенаправляем пользователя на страницу оплаты Stripe
+            const result = await stripe.redirectToCheckout({
+                sessionId: session.id,
+            });
+
+            if (result.error) {
+                alert(result.error.message);
+            }
+        });
+    </script>
+</body>
+</html>
