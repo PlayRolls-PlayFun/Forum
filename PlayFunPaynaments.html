@@ -37,7 +37,7 @@
 
     <script>
         // Инициализация Stripe
-        const stripe = Stripe('your-publishable-key'); // Замените на ваш ключ
+        const stripe = Stripe('pk_test_51QrOV9FTonGe4pKWuWGrrHyQ3x04MRQy3vCSavOsGmfLurtGZzvfyufYWuwMzEzMICotr8ba1jyH0IHWqtW4SG8M00vQRGtarq'); // Замените на ваш ключ
         const elements = stripe.elements();
         const cardElement = elements.create('card');
         cardElement.mount('#card-element');
