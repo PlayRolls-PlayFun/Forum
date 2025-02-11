@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lilita+One&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Russo+One&display=swap" rel="stylesheet">
+    <title>PlayFun Paynaments Ready</title>
+    <link rel="stylesheet" href="./css/styleForym.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css" />
+</head>
+<body>
+    <div class="image-container">
+        <img src="./img/playFunicon (3).png" alt="icon" class="logo">
+        <h1 id="text1">Paynaments Ready</h1>
+    </div>
+
+    <div class="confirmation">
+        <h2>Проверьте данные:</h2>
+        <p>Сумма пополнения: <span id="confirmAmount"></span></p>
+        <p>Имя и фамилия: <span id="confirmFullname"></span></p>
+        <button id="confirmPayment">Пополнить</button>
+    </div>
+
+    <script>
+        // Получаем параметры из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const amount = urlParams.get('amount');
+        const fullname = urlParams.get('fullname');
+
+        // Отображаем данные на странице
+        document.getElementById('confirmAmount').textContent = amount;
+        document.getElementById('confirmFullname').textContent = fullname;
+
+        // Обработка подтверждения платежа
+        document.getElementById('confirmPayment').addEventListener('click', () => {
+            alert('Платеж успешно обработан!');
+            // Перенаправление на главную страницу или страницу успеха
+            window.location.href = 'https://ваш-сайт.com/success';
+        });
+    </script>
+</body>
+</html>
