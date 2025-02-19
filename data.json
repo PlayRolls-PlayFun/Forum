@@ -1,0 +1,22 @@
+{
+    "users": {
+      "1": {
+        "balance": 1000,
+        "inventory": []
+      }
+    },
+    "fruits": {
+      "Gas": {"price": 100, "description": "Физический Фрукт Газа."},
+      "Dough": {"price": 35, "description": "Физический Фрукт Теста."},
+      "Leopard": {"price": 70, "description": "Физический Фрукт Леопарда."},
+      "T-Rex": {"price": 22, "description": "Физический Фрукт Ти-Рекса."},
+      "Spirit": {"price": 10, "description": "Физический Фрукт Спирита."},
+      "Mammoth": {"price": 12, "description": "Физический Фрукт Мамонта."},
+      "Venom": {"price": 10, "description": "Физический Фрукт Яда."},
+      "Control": {"price": 31, "description": "Физический Фрукт Контроля."},
+      "Shadow": {"price": 5, "description": "Физический Фрукт Тьмы."},
+      "Yeti": {"price": 160, "description": "Физический Фрукт йети."},
+      "Kitsune": {"price": 180, "description": "Физический Фрукт Китсун."},
+      "Buddha": {"price": 180, "description": "Физический Фрукт Будды."}
+    }
+  }
