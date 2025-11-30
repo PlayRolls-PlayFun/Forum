@@ -298,3 +298,50 @@ footer p {
 footer p:hover {
     opacity: 1;
 }
+
+/* Переключатель языков */
+.lang-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+    animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.lang-btn {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+.lang-btn.active {
+    background: linear-gradient(45deg, #00d4ff, #ffffff);
+    border-color: transparent;
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.5);
+}
+
+/* Стили для списков */
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
