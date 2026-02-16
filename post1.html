@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Как начать разработку игры</title>
+    <title>Как начать разработку игры | PlayRolls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +18,7 @@
 
     <header>
         <div class="container">
-            <h1 data-lang="gameDevTitle">Как начать разработку игры</h1>
+            <h1 class="logo-text"><span class="logo-play">Play</span><span class="logo-set">Rolls</span></h1>
             <nav>
                 <a href="index.html" data-lang="home">Главная</a>
                 <a href="post2.html" data-lang="nextArticle">Следующая статья</a>
@@ -24,38 +27,45 @@
     </header>
 
     <main>
-        <section class="post-content">
+        <section class="hero">
             <div class="container">
-                <h2 data-lang="discussion">Обсуждение</h2>
-                <p><span data-lang="author">Автор</span>: Иван</p>
-                <p data-lang="post1Text">Здесь обсуждаем, с чего начать и какие шаги нужно предпринять для начала разработки игры.</p>
+                <h2 data-lang="gameDevTitle">Как начать разработку игры</h2>
+            </div>
+        </section>
 
-                <h3 data-lang="comments">Комментарии:</h3>
-                <div class="comment">
-                    <p><strong>Алексей:</strong> <span data-lang="post1Comment1">Для начала нужно выбрать движок для игры. Unity или Unreal Engine — это отличные варианты для начинающих.</span></p>
+        <section class="legal-content">
+            <div class="container">
+                <div class="post-content">
+                    <h2 data-lang="discussion">Обсуждение</h2>
+                    <p><span data-lang="author">Автор</span>: Иван</p>
+                    <p data-lang="post1Text">Здесь обсуждаем, с чего начать и какие шаги нужно предпринять для начала разработки игры.</p>
+
+                    <h3 data-lang="comments">Комментарии:</h3>
+                    <div class="comment">
+                        <p><strong>Алексей:</strong> <span data-lang="post1Comment1">Для начала нужно выбрать движок для игры. Unity или Unreal Engine — это отличные варианты для начинающих.</span></p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Мария:</strong> <span data-lang="post1Comment2">Я бы посоветовала изучить C# для Unity, это поможет вам создавать игровые механики.</span></p>
+                    </div>
+
+                    <h3 data-lang="addComment">Добавить комментарий:</h3>
+                    <form action="#" method="POST">
+                        <textarea id="comment" name="comment" rows="4" required></textarea>
+                        <button type="submit" data-lang="submit">Отправить</button>
+                    </form>
+
+                    <p><em data-lang="allRights">Все права защищены PlayRolls</em></p>
                 </div>
-                <div class="comment">
-                    <p><strong>Мария:</strong> <span data-lang="post1Comment2">Я бы посоветовала изучить C# для Unity, это поможет вам создавать игровые механики.</span></p>
-                </div>
-
-                <h3 data-lang="addComment">Добавить комментарий:</h3>
-                <form action="#" method="POST">
-                    <textarea id="comment" name="comment" rows="4" required></textarea>
-                    <button type="submit" data-lang="submit">Отправить</button>
-                </form>
-
-                <p><em data-lang="allRights">Все права защищены PlayRolls</em></p>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p data-lang="copyright">© 2025 PlayRolls. Все права защищены.</p>
+            <p data-lang="copyright">© 2025 <span class="logo-play">Play</span><span class="logo-set">Rolls</span>. Все права защищены.</p>
         </div>
     </footer>
 
     <script src="lang.js"></script>
 </body>
 </html>
-

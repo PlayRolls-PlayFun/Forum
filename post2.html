@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Как создать логотип для игры</title>
+    <title>Как создать логотип для игры | PlayRolls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,45 +18,54 @@
 
     <header>
         <div class="container">
-            <h1 data-lang="logoTitle">Как создать логотип для игры</h1>
+            <h1 class="logo-text"><span class="logo-play">Play</span><span class="logo-set">Rolls</span></h1>
             <nav>
                 <a href="index.html" data-lang="home">Главная</a>
-                <a href="post3.html" data-lang="nextTopic">Следующая тема</a>
+                <a href="post1.html" data-lang="nextTopic">Следующая тема</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="post-content">
+        <section class="hero">
             <div class="container">
-                <h2 data-lang="discussion">Обсуждение</h2>
-                <p><span data-lang="author">Автор</span>: Алексей</p>
-                <p data-lang="post2Text">Какие инструменты лучше использовать для создания логотипа и как выбрать стиль.</p>
+                <h2 data-lang="logoTitle">Как создать логотип для игры</h2>
+            </div>
+        </section>
 
-                <h3 data-lang="comments">Комментарии:</h3>
-                <div class="comment">
-                    <p><strong>Иван:</strong> <span data-lang="post2Comment1">Я использую Photoshop и Illustrator для создания логотипов. Это самые мощные инструменты для дизайна.</span></p>
-                </div>
-                <div class="comment">
-                    <p><strong>Мария:</strong> <span data-lang="post2Comment2">Для более простых логотипов подойдут и бесплатные инструменты, такие как GIMP или Inkscape.</span></p>
-                </div>
+        <section class="legal-content">
+            <div class="container">
+                <div class="post-content">
+                    <h2 data-lang="discussion">Обсуждение</h2>
+                    <p><span data-lang="author">Автор</span>: Мария</p>
+                    <p data-lang="post2Text">Какие инструменты лучше использовать для создания логотипа и как выбрать стиль.</p>
 
-                <h3 data-lang="addComment">Добавить комментарий:</h3>
-                <form action="#" method="POST">
-                    <textarea id="comment" name="comment" rows="4" required></textarea>
-                    <button type="submit" data-lang="submit">Отправить</button>
-                </form>
+                    <h3 data-lang="comments">Комментарии:</h3>
+                    <div class="comment">
+                        <p><strong>Дмитрий:</strong> <span data-lang="post2Comment1">Я использую Photoshop и Illustrator для создания логотипов. Это самые мощные инструменты для дизайна.</span></p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Анна:</strong> <span data-lang="post2Comment2">Для более простых логотипов подойдут и бесплатные инструменты, такие как GIMP или Inkscape.</span></p>
+                    </div>
+
+                    <h3 data-lang="addComment">Добавить комментарий:</h3>
+                    <form action="#" method="POST">
+                        <textarea id="comment" name="comment" rows="4" required></textarea>
+                        <button type="submit" data-lang="submit">Отправить</button>
+                    </form>
+
+                    <p><em data-lang="allRights">Все права защищены PlayRolls</em></p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p data-lang="copyright">© 2025 PlayRolls. Все права защищены.</p>
+            <p data-lang="copyright">© 2025 <span class="logo-play">Play</span><span class="logo-set">Rolls</span>. Все права защищены.</p>
         </div>
     </footer>
 
     <script src="lang.js"></script>
 </body>
 </html>
-
